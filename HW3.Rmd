@@ -40,7 +40,12 @@ UnitedStates <- gapminder5060[gapminder5060$country == "United States", ]
 head(UnitedStates)
 
 library(ggplot2)
-ggplot(data = UnitedStates, aes(x = year, y = lifeExp)) + geom_line()
+ggplot(data = UnitedStates, aes(x = lifeExp, y = gdpPercap)) + geom_line()
+
+countries = c("United States", "Canada")
+UnitedStates.Canada = gapminder5060[gapminder5060$country %in% countries, ]
+
+ggplot(data = UnitedStates.Canada, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country))
 ```
 
 
