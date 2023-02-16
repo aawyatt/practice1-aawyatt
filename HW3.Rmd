@@ -41,8 +41,6 @@ library(ggplot2)
 
 gapminder = read.csv("/Users/alisonwyatt/Documents/School/Year2/Spring22/DS202/HW/HW3/gapminder-5060.csv", header = TRUE)
 
-ggplot(data = gapminder[gapminder$country == 'United States',], aes(x= log(lifeExp), y = log(gdpPercap)))+
-  geom_line()
 ```
 
 *Here is for US* -note that your path for the csv will be different
