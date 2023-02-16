@@ -48,19 +48,24 @@ ggplot(data = gapminder[gapminder$country == 'United States',], aes(x= log(lifeE
 *Here is for US* -note that your path for the csv will be different
 
 ```{r}
+library(ggplot2)
 gapminder5060 <- read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Lecture1_collaborative-environment/data/gapminder-5060.csv")
 head(gapminder5060)
 
 UnitedStates <- gapminder5060[gapminder5060$country == "United States", ]
 head(UnitedStates)
+ggplot(data = UnitedStates, aes(x = lifeExp, y = gdpPercap)) + geom_line() 
 
-library(ggplot2)
-ggplot(data = UnitedStates, aes(x = lifeExp, y = gdpPercap)) + geom_line()
+Canada <- gapminder5060[gapminder5060$country == "Canada", ]
 
-countries = c("United States", "Canada")
-UnitedStates.Canada = gapminder5060[gapminder5060$country %in% countries, ]
+# Fix wrong value in Canada
+Canada$lifeExp[Canada$year == 1957] = mean(c(68.75, 71.30, 72.13))
+head(Canada)
+ggplot(data = Canada, aes(x = lifeExp, y = gdpPercap)) + geom_line() 
 
-ggplot(data = UnitedStates.Canada, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country))
+UnitedStates.Canada = rbind(UnitedStates, Canada)
+
+ggplot(data = UnitedStates.Canada, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country)) 
 ```
 
 3.  Write a paragraph (\~200 words) describing an example of what you consider data science. Write your paragraph in R Markdown. Include at least
