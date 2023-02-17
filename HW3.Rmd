@@ -64,6 +64,11 @@ ggplot(data = Canada, aes(x = lifeExp, y = gdpPercap)) + geom_line()
 UnitedStates.Canada = rbind(UnitedStates, Canada)
 
 ggplot(data = UnitedStates.Canada, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country)) 
+
+Australia <- gapminder5060[gapminder5060$country == "Australia", ]
+ggplot(data = Australia, aes(x = lifeExp, y = gdpPercap)) + geom_line() 
+UnitedStates.Canada.Australia = rbind(UnitedStates.Canada,Australia)
+ggplot(data = UnitedStates.Canada.Australia, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country)) 
 ```
 
 3.  Write a paragraph (\~200 words) describing an example of what you consider data science. Write your paragraph in R Markdown. Include at least
