@@ -43,12 +43,26 @@ library(ggplot2)
 gapminder5060 <- read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Lecture1_collaborative-environment/data/gapminder-5060.csv")
 head(gapminder5060)
 
+#fix wrong data point of Canada
+gapminder5060 [82,4] <- 69.96
+
 UnitedStates <- gapminder5060[gapminder5060$country == "United States", ]
 head(UnitedStates)
+<<<<<<< HEAD
+Australia <- gapminder5060[gapminder5060$country == "Australia", ]
+head(UnitedStates)
+=======
 ggplot(data = UnitedStates, aes(x = lifeExp, y = gdpPercap)) + geom_line() 
+>>>>>>> be331c621df09bced00ab31321bfdc20a1eccf55
 
 Canada <- gapminder5060[gapminder5060$country == "Canada", ]
 
+<<<<<<< HEAD
+countries = c("United States", "Canada", "Australia")
+UnitedStates.Canada.Australia = gapminder5060[gapminder5060$country %in% countries, ]
+
+ggplot(data = UnitedStates.Canada.Australia, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country))
+=======
 # Fix wrong value in Canada
 Canada$lifeExp[Canada$year == 1957] = mean(c(68.75, 71.30, 72.13))
 head(Canada)
@@ -62,6 +76,7 @@ Australia <- gapminder5060[gapminder5060$country == "Australia", ]
 ggplot(data = Australia, aes(x = lifeExp, y = gdpPercap)) + geom_line() 
 UnitedStates.Canada.Australia = rbind(UnitedStates.Canada,Australia)
 ggplot(data = UnitedStates.Canada.Australia, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country)) 
+>>>>>>> be331c621df09bced00ab31321bfdc20a1eccf55
 ```
 
 ![](Screen%20Shot%202023-02-16%20at%205.36.09%20PM.png)
