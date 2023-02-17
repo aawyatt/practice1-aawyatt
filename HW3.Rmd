@@ -36,13 +36,15 @@ ggplot(data = gapminder[gapminder$country == 'United States',], aes(x= log(lifeE
 gapminder5060 <- read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Lecture1_collaborative-environment/data/gapminder-5060.csv")
 head(gapminder5060)
 
+gapminder5060 [82,4] <- 69.96
+
 UnitedStates <- gapminder5060[gapminder5060$country == "United States", ]
 head(UnitedStates)
 
 library(ggplot2)
 ggplot(data = UnitedStates, aes(x = lifeExp, y = gdpPercap)) + geom_line()
 
-countries = c("United States", "Canada")
+countries = c("United States", "Canada", "Australia")
 UnitedStates.Canada = gapminder5060[gapminder5060$country %in% countries, ]
 
 ggplot(data = UnitedStates.Canada, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country))
