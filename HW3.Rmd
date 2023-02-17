@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #### Due: 2/17/2022 before 11:59pm. Submit in Canvas (file upload).
 
 1.  Finish the in-class practice in Slides 3-12 in "Lecture 2-2-Practice for git", link: <https://yumouqiu.github.io/DS202-Spring2023/Practice/practice01.html>
+
     a.  Download the RMarkdown file with these homework instructions to use as a template for your work. Make sure to replace "Your Name" with your name.\
 
     b.  In the RMarkdown file, write down table of team members, and their github repository links;\
@@ -19,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
         the number of pull requests you accepted, and the github repository from which you accepted.
 
         | Names:                                             | Kylie Knudten                                    | Alison Wyatt                                     | Angelina Allen                                     |
-        |----------------------------------------------------|--------------------------------------------------|--------------------------------------------------|----------------------------------------------------|
+        |------------------|------------------|------------------|------------------|
         | Github Repository Links:                           | <https://github.com/kknudten/practice1-kknudten> | <https://github.com/aawyatt/practice1-aawyatt>   | <https://github.com/ajallen23/practice1-ajallen23> |
         | Number of successful pull requests:                | 3                                                | 1                                                | 2                                                  |
         | Github repository to which you requested a change: | <https://github.com/aawyatt/practice1-aawyatt>   | <https://github.com/kknudten/practice1-kknudten> | <https://github.com/aawyatt/practice1-aawyatt>     |
@@ -33,17 +34,9 @@ knitr::opts_chunk$set(echo = TRUE)
         2.  Have notifications on for receiving pull requests in order for timely merging and updating repositories.
 
         3.  Make comments when opening a pull requests so the person receiving it can know exactly what was changed.
+
 2.  Generate the graph of LifExp vs. gdpPercap for US, Canada (fixed data) and Australia by RMarkdown based on the data set "gapminder-5060", like what we did in the class.\
     Please use Github to collaborate on this problem. For example, one member can create the plot of US in his/her repository. The other member will fork this repository, add the result for the second country, and make a pull request for merging into the main repository. Each member should at least analyze one country and make at least one pull request. **Please submit the RMarkdown file, the output file, and the screen shot of the successful pull request and the merge.**
-
-```{r}
-library(ggplot2)
-
-gapminder = read.csv("/Users/alisonwyatt/Documents/School/Year2/Spring22/DS202/HW/HW3/gapminder-5060.csv", header = TRUE)
-
-```
-
-*Here is for US* -note that your path for the csv will be different
 
 ```{r}
 library(ggplot2)
@@ -71,8 +64,16 @@ UnitedStates.Canada.Australia = rbind(UnitedStates.Canada,Australia)
 ggplot(data = UnitedStates.Canada.Australia, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country)) 
 ```
 
+![](Screen%20Shot%202023-02-16%20at%205.36.09%20PM.png)
+
+![](Screen%20Shot%202023-02-16%20at%205.37.52%20PM.png)
+
+![](Screenshot%202023-02-16%20at%205.38.17%20PM.png)
+
 3.  Write a paragraph (\~200 words) describing an example of what you consider data science. Write your paragraph in R Markdown. Include at least
     a.  one link to a chart or an image and
     b.  at least one itemized or enumerated list.
+
+To me, one cool thing that I consider data science is sport science.
 
 For the submission: submit your solution in an **R Markdown file** and (just for insurance) submit the corresponding html (or Word) file with it.
