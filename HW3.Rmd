@@ -21,10 +21,10 @@ knitr::opts_chunk$set(echo = TRUE)
         | Names:                                             | Kylie Knudten                                    | Alison Wyatt                                     | Angelina Allen                                     |
         |------------------|------------------|------------------|------------------|
         | Github Repository Links:                           | <https://github.com/kknudten/practice1-kknudten> | <https://github.com/aawyatt/practice1-aawyatt>   | <https://github.com/ajallen23/practice1-ajallen23> |
-        | Number of successful pull requests:                | 1                                                | 1                                                | 2                                                  |
+        | Number of successful pull requests:                | 3                                                | 1                                                | 2                                                  |
         | Github repository to which you requested a change: | <https://github.com/aawyatt/practice1-aawyatt>   | <https://github.com/kknudten/practice1-kknudten> | <https://github.com/aawyatt/practice1-aawyatt>     |
-        | Number of pull requests accepted:                  | 1                                                | 1                                                | 0                                                  |
-        | Github repository that you accepted a change from: | <https://github.com/aawyatt/practice1-aawyatt>   | <https://github.com/kknudten/practice1-kknudten> |                                                    |
+        | Number of pull requests accepted:                  | 1                                                | 3                                                | 1                                                  |
+        | Github repository that you accepted a change from: | <https://github.com/aawyatt/practice1-aawyatt>   | <https://github.com/kknudten/practice1-kknudten> | <https://github.com/aawyatt/practice1-aawyatt>     |
 
     c.  Write down a list with at least 3 tips of how to make working with git/github easier
 
