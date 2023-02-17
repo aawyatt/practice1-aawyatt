@@ -4,6 +4,7 @@ tips to working with git and github
 Alison Wyatt
 **Kylie Knudten**
 -Angelina Allen 
+Colin Russell
 
 I tell people that my field of study is taking data, manipulating it, and using it to make informed decisions. 
 
