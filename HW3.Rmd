@@ -71,6 +71,8 @@ UnitedStates.Canada.Australia = rbind(UnitedStates.Canada,Australia)
 ggplot(data = UnitedStates.Canada.Australia, aes(x = lifeExp, y = gdpPercap)) + geom_line(aes(color = country)) 
 ```
 
+![](images/Screenshot%202023-02-16%20at%205.38.17%20PM.png){width="572"}
+
 3.  Write a paragraph (\~200 words) describing an example of what you consider data science. Write your paragraph in R Markdown. Include at least
     a.  one link to a chart or an image and
     b.  at least one itemized or enumerated list.
